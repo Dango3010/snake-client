@@ -1,4 +1,4 @@
-//a separate module for the TCP connection
+//a separate module for the TCP connection//
 const net = require("net");
 
 // establishes a connection with the game server
