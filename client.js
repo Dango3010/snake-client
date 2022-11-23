@@ -8,7 +8,8 @@ const connect = function () { //the function sets up a connection and returns an
     port: 50541// PORT number here,
   });
   conn.on("connect", () => {
-    // code that does something when the connection is first established
+    console.log("Successfully connected to game server");
+    conn.write("Name: ONO"); //how to send data via TCP
   });
 
   // interpret incoming data as text
