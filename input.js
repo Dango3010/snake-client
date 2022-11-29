@@ -13,15 +13,15 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-const movement = {w: 'up', a: 'left', s: 'down', d: 'right'};
 const handleUserInput = function (key) {
   if (key === '\u0003') { // \u0003 maps to ctrl+c input
     process.exit();
   }
-  if (movement[key]) {
-    console.log(`going ${movement[key]}`);
-    connection.write(`Move: ${movement[key]}`);
+  if (aww.movement[key]) {
+    console.log(`going ${aww.movement[key]}`);
+    connection.write(`Move: ${aww.movement[key]}`);
   }
 };
 
 module.exports = setupInput;
+const aww = require("./constants");
