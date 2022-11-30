@@ -17,11 +17,11 @@ const handleUserInput = function (key) {
   if (key === '\u0003') { // \u0003 maps to ctrl+c input
     process.exit();
   }
-  if (aww.movement[key]) {
-    console.log(`going ${aww.movement[key]}`);
-    connection.write(`Move: ${aww.movement[key]}`);
+  if (obj.movement[key]) {
+    console.log(`going ${obj.movement[key]}`);
+    connection.write(`Move: ${obj.movement[key]}`);
   }
 };
 
 module.exports = setupInput;
-const aww = require("./constants");
+const obj = require("./constants");

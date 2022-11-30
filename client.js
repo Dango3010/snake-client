@@ -10,7 +10,7 @@ const connect = function () { //the function sets up a connection and returns an
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: ONO"); //how to send data via TCP
-    conn.write("Say: mochi"); //sending messages, allowing players to banter.
+    conn.write("Say: unicorn"); //sending messages, allowing players to banter.
   });
 
   // interpret incoming data as text
