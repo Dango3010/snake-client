@@ -1,5 +1,6 @@
 //a separate module for the TCP connection//
 const net = require("net");
+const b = require("./constants");
 
 // establishes a connection with the game server
 const connect = function () { //the function sets up a connection and returns an object.
@@ -10,8 +11,11 @@ const connect = function () { //the function sets up a connection and returns an
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: ONO"); //how to send data via TCP
-    conn.write("Say: unicorn"); //sending messages, allowing players to banter.
   });
+
+  // conn.on("connect", () => {
+  //   conn.write("Say: mochi"); //sending messages, allowing players to banter. another way to do it is in input.js
+  // });
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
@@ -20,4 +24,3 @@ const connect = function () { //the function sets up a connection and returns an
 };
 
 module.exports = connect;
-const b = require("./constants");

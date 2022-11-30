@@ -1,3 +1,5 @@
+const obj = require("./constants");
+
 // Stores the active TCP connection object.
 let connection;
 
@@ -21,7 +23,10 @@ const handleUserInput = function (key) {
     console.log(`going ${obj.movement[key]}`);
     connection.write(`Move: ${obj.movement[key]}`);
   }
+  if (key === 'm') {
+    connection.write(`Say: mochi`); //sending messages.
+  }
 };
 
 module.exports = setupInput;
-const obj = require("./constants");
+
